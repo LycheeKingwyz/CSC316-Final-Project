@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--    BOOTSTRAP     -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--    Animate.css     -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
+    <!-- Own Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vis_styles.css">
+    <link rel="stylesheet" href="css/s2-styles.css">
+    <link rel="stylesheet" href="css/s6_styles.css">
+
+    <title>CSC316 Brain Drugs</title>
+</head>
+
+<body>
+    <div class="scroll-snap-wrapper">
+        <!-- Section 1: Title -->
+        <!-- TODO: Add proper subtitle (line 33)-->
+        <section id="s1">
+            <div class="row">
+                <img id="title-scroll" src="img/title-scroll.png" class="animate__animated animate__slideInDown">
+            </div>
+
+            <div>
+                <img id="garden" src="img/garden.svg" class="animate__animated animate__bounceInUp animate__delay-3s animate__slow">
+                <img id="title-subtitle-sign" src="img/signboard-clipart-xl.png" class="animate__animated animate__flipInX animate__delay-2s animate__slow">
+                <img id="title-rat-img" src="img/title-rat.png" class="animate__animated animate__slideInUp animate__flipInX animate__delay-1s" onclick="showSparkle()">
+                <img id="title-rat-sparkle-gif" src="https://i.gifer.com/origin/f9/f9abd21a7f2be6472c1852518c8e605b.gif" onclick="showSparkle()">
+            </div>
+        </section>
+
+        <!-- Section 2: Mental Illness in Canada (CAMH) -->
+        <!-- TODO: Add "according to camh..." -->
+        <!-- TODO (Optional): Add transitions to each img element  -->
+        <section id="s2">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/009/307/490/small/wooden-spoon-isolated-on-transparent-background-file-png.png"
+                id="wooden-spoon-img">
+            <img id="tomato1" src="https://pngimg.com/uploads/tomato/tomato_PNG12573.png">
+            <img id="tomato2" src="https://www.freepnglogos.com/uploads/tomato-png/tomato-viva-mamma-pasta-italian-style-authentic-meal-usa-22.png">
+            <img id="tomato3" src="https://pngimg.com/uploads/tomato/tomato_PNG12573.png">
+            <img id="towel" src="https://previews.123rf.com/images/opicobello/opicobello1605/opicobello160500032/56556720-seamless-blue-colored-checkered-table-cloth-pattern-for-background-design.jpg">
+            <img id="cheese" src="https://www.freeiconspng.com/thumbs/cheese/fresh-cheese-original-photo-21.png">
+            <img class="basil-frame" src="img/basil-frame.png">
+
+            <div class="orbit-parent">
+                <div class="orbit">
+
+                    <div class="orbit-center-content">
+                        <div class="camh-info animate__animated animate__fadeIn animate__slower"> 1 in 5 Canadians will experience a mental illness. </div>
+                            <div class="continue-button-container animate__animated animate__fadeIn animate__delay-2s" onclick="nextSection(event)">
+                                <div class="continue-button">
+                                    <i class="continue-button-icon arrow right"> </i>
+                                </div>
+                            </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <img src="img/rat-orbit/rat-orbit-1.png" alt="">
+                            <p> rat </p>
+                        </li>
+
+                        <li>
+                            <img src="img/rat-orbit/rat-orbit-2.png" alt="">
+                            <p> rat </p>
+                        </li>
+
+                        <li>
+                            <img src="img/rat-orbit/rat-orbit-3.png" alt="">
+                            <p> rat </p>
+                        </li>
+
+                        <li>
+                            <img src="img/rat-orbit/rat-orbit-4.png" alt="">
+                            <p> rat </p>
+                        </li>
+
+                        <li>
+                            <img src="img/rat-orbit/rat-orbit-5.png" alt="">
+                            <p> rat </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 3: Common view - chemical imbalances -->
+        <section id="s3">
+<!--            Section 3-->
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="section-3">
+                        <div class="s3-explanation">
+                            <div id="s3-explanation-1" class="animate__animated animate__fadeIn animate__slower">
+                                Maybe you've heard of mental conditions described as "chemical imbalances".
+                            </div>
+
+                            <div id="s3-explanation-2" class="s3-explanation-break animate__animated animate__fadeIn animate__slower animate__delay-1s">
+                                Sometimes, this is can be the case!
+                            </div>
+                            <div id="s3-explanation-3" class="s3-explanation-break animate__animated animate__fadeIn animate__slower animate__delay-2s">
+                                Similar to Goldilocks looking for a perfect bowl of porridge,
+                            </div>
+                            <div id="s3-explanation-4" class="s3-explanation-break animate__animated animate__fadeIn animate__slower animate__delay-3s">
+                                too much or too little of certain brain chemicals can cause undesired effects.
+                            </div>
+                            <div id="s3-explanation-5" class="s3-explanation-break animate__animated animate__fadeIn animate__slower animate__delay-4s">
+                                Brains want the "just-right" amount of chemicals to function properly!
+                            </div>
+                        </div>
+
+                        <div id="soup-table">
+
+                        </div>
+                        <!-- animate__slower animate__delay-5s -->
+                        <div class="soup-temperature-container animate__animated animate__bounceInLeft">
+                            <div class="steam-container">
+                                <img id="steam1" class="steam-gif" src="https://media.baamboozle.com/uploads/images/613393/1673809501_61805_gif-url.gif">
+                                <img id="steam2" class="steam-gif" src="https://media.baamboozle.com/uploads/images/613393/1673809501_61805_gif-url.gif">
+                                <img id="steam3" class="steam-gif" src="https://media.baamboozle.com/uploads/images/613393/1673809501_61805_gif-url.gif">
+                            </div>
+                            <div class="bowl-container ">
+                                <button class="soup" value="hot" onclick="changeExpression(event)"> Too hot </button>
+                                <button class="soup" value="cold" onclick="changeExpression(event)"> Too cold </button>
+                                <button class="soup" value="right" onclick="changeExpression(event)"> Just right! </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-5 salt-rat-parent">
+                    <img id="salt-rat" src="img/rat-salt.png">
+                    <img id="salt-rat-hot" src="img/rat-salt-hot.png">
+                    <img id="salt-rat-cold" src="img/rat-salt-cold.png">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 4: Assembly line -->
+        <section id="s4">
+            <div class="section-4">
+                <div class="s4-explanation-container">
+                    <div class="s4-explanation">
+                        <br>
+                        <div id="s4-explanation-1" class="s4-explanation-break">
+                            Although we don't have all the answers of how the brain works,
+                        </div>
+                        <div id="s4-explanation-2" class="s4-explanation-break">
+                            we know that the brain and its networks are intricately connected.
+                        </div>
+                        <div id="s4-explanation-3" class="s4-explanation-break">
+                            All structures need to be in sync to work properly!
+                        </div>
+
+                        <div class="continue-button-container s4-continue-button animate__animated animate__fadeIn animate__delay-2s" onclick="nextSection(event)">
+                            <div class="continue-button">
+                                <i class="continue-button-icon arrow right"> </i>
+                            </div>
+                        </div>
+
+                    </div>
+<!--                    <img src=""> TODO: scalloped square-->
+                </div>
+
+                <div id="rat-assembly-line">
+                    <img src="img/rat-assembly-line.png">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Section 5: vis #1 Network graph -->
+        <section id="s5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="vis-area-parent">
+                        <iframe class="vis-salt" src="vis-graph/graph.html" width="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <img id="salt-shaker-img" src="img/salt-shaker.png">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-8">
+                            <div class="vis-explanation-parent">
+                                <div class="vis-explanation">
+                                    Due to the interconnectedness of the brain structures, <br>
+                                    a drug meant to treat one condition
+                                    can end up treating multiple other conditions.
+                                </div>
+                            </div>
+                            <div class="continue-button-container s5-continue-button animate__animated animate__fadeIn animate__delay-2s" onclick="nextSection(event)">
+                                <div class="continue-button">
+                                    <i class="continue-button-icon arrow right"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1"> ... </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Section 6: vis #2 Heatmap  -->
+        <section id="s6">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="vis-explanation-parent">
+                        <div class="vis-explanation">
+                            In (very) simple terms, drugs target structures in the brain to produce its effects. <br>
+                            These drugs can affect brain structures in different ways. <br>
+                            Here's an explanation for some of them: <br>
+
+                            <div class="mechanism-explanations-container">
+                                <div class="term-container">
+                                    <div class="term">
+                                        Agonists
+                                    </div>
+                                    <div class="definition">
+                                        [Definition]
+                                    </div>
+                                </div>
+
+                                <div class="term-container">
+                                    <div class="term">
+                                        Antagonists
+                                    </div>
+                                    <div class="definition">
+                                        [Definition]
+                                    </div>
+                                </div>
+
+                                <div class="term-container">
+                                    <div class="term">
+                                        Inhibitors
+                                    </div>
+                                    <div class="definition">
+                                        [Definition]
+                                    </div>
+                                </div>
+
+                                <div class="term-container">
+                                    <div class="term">
+                                        Modulators
+                                    </div>
+                                    <div class="definition">
+                                        [Definition]
+                                    </div>
+                                </div>
+                            </div>
+
+                            However, there is no one magic mechanism! <br>
+                            Here's a visualization of diseases and the number of mechanisms a drug might use to treat it.
+
+                            <div class="continue-button-container s6-continue-button animate__animated animate__fadeIn animate__delay-2s" onclick="nextSection(event)">
+                                <div class="continue-button">
+                                    <i class="continue-button-icon arrow right"> </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="vis-area-parent">
+                        <!-- Heatmap vis by Tianyu Fan-->
+                        <iframe src="vis-heatmap/heatmap.html" width="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: vis #3 drugs and diseases -->
+        <section id="s7">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="vis-explanation-parent">
+                        <div class="vis-explanation">
+                            Here's a presentation of some of the medications available for different disorders. <br>
+                            Click on the different conditions and see if you've heard of some of the medications!
+                            <div class="continue-button-container s7-continue-button animate__animated animate__fadeIn animate__delay-1s" onclick="nextSection(event)">
+                                <div class="continue-button">
+                                    <i class="continue-button-icon arrow right"> </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div>
+                        <div class="vis-area-parent">
+                            <!-- Sunburst visualization by Yizhi Wu-->
+                            <iframe src="vis-sunburst/sunburst.html" width="100%" height="500px" style="border: none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: vis #4 drugs and receptors -->
+        <section id="s8">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="vis-area-parent">
+                        <!-- Chord visualization by Tianyu Fan-->
+                        <iframe src="vis-chord/chord.html" width="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="vis-explanation-parent">
+                        <div class="vis-explanation">
+                            <div id="s8-explanation-1" class="s8-explanation-break">
+                                If you are curious about medications and their target structure, this section is for you! <br>
+                            </div>
+                            <div id="s8-explanation-2" class="s9-explanation-break">
+                                Although we can't make causal claims with this information, <br>
+                            </div>
+                            <div id="s8-explanation-3" class="s9-explanation-break">
+                                it's interesting to see how drugs might interact with multiple conditions.
+                            </div>
+
+                            <div class="continue-button-container s7-continue-button animate__animated animate__fadeIn animate__delay-1s" onclick="nextSection(event)">
+                                <div class="continue-button">
+                                    <i class="continue-button-icon arrow right"> </i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Be nice -->
+        <section id="s9">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="s9-explanation-parent">
+                        <div class="s9-explanation">
+                            <div id="s9-explanation-1" class="s9-explanation-break">
+                                Struggling with mental health can affect more of daily life than meets the eye.
+                            </div>
+                            <div id="s9-explanation-2" class="s9-explanation-break">
+                                Due to the concealed nature of one's mental well-being,
+                            </div>
+                            <div id="s9-explanation-3" class="s9-explanation-break">
+                                we can't know what someone is going through.
+                            </div>
+                            <div id="s9-explanation-4" class="s9-explanation-break">
+                                Try to be as kind as you can-- without compromising yourself.
+                            </div>
+                        </div>
+
+                        <div class="continue-button-container s9-continue-button animate__animated animate__fadeIn animate__delay-1s" onclick="nextSection(event)">
+                            <div class="continue-button">
+                                <i class="continue-button-icon arrow right"> </i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rain-container">
+                <img id="rain-floor-1" class="rain-floor" src="https://i.gifer.com/origin/c2/c25c35a6cbc70bdc9f52dd1d4d5a3cbe_w200.webp">
+                <img id="rain-floor-2" class="rain-floor" src="https://i.gifer.com/origin/c2/c25c35a6cbc70bdc9f52dd1d4d5a3cbe_w200.webp">
+                <img id="rain-floor-3" class="rain-floor" src="https://i.gifer.com/origin/c2/c25c35a6cbc70bdc9f52dd1d4d5a3cbe_w200.webp">
+            </div>
+
+            <div class="rat-rain-img-parent">
+                <img id="rain-gif" src="https://img1.picmix.com/output/stamp/normal/8/9/3/7/697398_ab88f.gif">
+                <img id="rat-rain-img" src="img/rat-rain.png">
+            </div>
+
+        </section>
+
+        <!-- Section 10: Resources -->
+        <section id="s10">
+            <div class="s10-explanation-parent">
+                <div class="s10-explanation">
+                    If you (or someone you know) needs help,
+                    here's some resources: <br>
+                    For medical emergencies, call 9-1-1. <br>
+                    For mental health crisis, call 9-8-8.<br>
+                    <br>
+                    <div class="specific-resources">
+                        UofT specific mental health resources: https://mentalhealth.utoronto.ca/ <br>
+                        Toronto mental health resources: https://www.toronto.ca/community-people/health-wellness-care/health-programs-advice/mental-health-resources/ <br>
+                        Ontario mental health resources: https://www.ontario.ca/page/find-mental-health-support <br>
+                    </div>
+                </div>
+            </div>
+            <img id="window" src="https://png.pngtree.com/png-vector/20220608/ourmid/pngtree-window-icon-design-vector-templates-white-on-background-png-image_4887910.png">
+            <div class="rat-therapy-img-parent">
+                <img id="rat-therapy-img" src="img/rat-therapy.png">
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Bootstrap JS --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- D3 JS --> 
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Own JS --> 
+    <script src="js/main.js"></script>
+    <script src="vis-heatmap/heatmap.js"></script>
+
+
+</body>
+
+</html>

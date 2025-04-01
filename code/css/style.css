@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+
+/***************************************
+        GENERAL SECTION STYLES
+***************************************/
+
+/*body {*/
+/*    !* Fonts *!*/
+/*    font-family: "Varela Round", sans-serif;*/
+/*    color: #076cbc;*/
+/*    background-color: #fefae8;*/
+/*}*/
+/* TODO: Why does changing this affect the assembly line picture? */
+
+/* To inherit heights */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* For scroll snapping. Source: Anansi Creative, https://www.youtube.com/watch?v=o_lWNEevHJo&t=354s*/
+.scroll-snap-wrapper {
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll; /* Enables vertical scrolling */
+    height: 100vh;
+}
+
+.scroll-snap-wrapper { /* Disable scrollbars */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scroll-snap-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual section (slide) styles */
+section {
+    position: relative;
+    scroll-snap-align: start;
+
+    /* curr dimensions */
+    height: 100vh;
+    width: 100vw;
+
+    /*font-family: "Varela Round", sans-serif;*/
+    font-family: "Belanosima", sans-serif;
+    font-size: 1.2rem;
+
+    color: #1880d5;
+    background-color: #fff8e0; /* alt: #f2ebdb */
+
+    overflow: hidden; /* prevent overflow */
+}
+
+/* To pause animations when needed */
+.paused {
+    animation-play-state: paused;
+}
+
+/***************************************
+    SECTION 1: Title card
+***************************************/
+
+#title-scroll{
+    height: 75vh;
+    width: 100vw;
+
+    z-index: 2;
+}
+
+#title-subtitle-sign{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+
+    height: 27rem;
+    max-height: 100%;
+    filter: invert(54%) sepia(92%) saturate(177%) hue-rotate(191deg) brightness(82%) contrast(77%);    /*Source to convert color to filter: https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+#garden {
+    position: absolute;
+    bottom: -50%;
+
+    height: 60rem;
+    width: 100vw;
+    transform: rotate(0deg);
+}
+
+#title-rat-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    height: 75vh;
+    max-height: 100%;
+
+    cursor: pointer;
+    z-index: 3;
+}
+
+
+#title-rat-sparkle-gif{
+    position: absolute;
+    right: 7%;
+    bottom: 30%;
+
+    height: 20%;
+    filter: invert(15%) sepia(66%) saturate(630%) hue-rotate(318deg) brightness(105%) contrast(103%);
+    mix-blend-mode: hard-light;
+
+    opacity: 0;
+    cursor: pointer;
+    z-index: 4;
+}
+
+#title-rat-sparkle-gif.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0s; /* Immediate visibility after fade-in */
+}
+
+
+/***************************************
+    SECTION 2: Mental illness in Canada
+ ***************************************/
+.basil-frame {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 100%;
+}
+
+#wooden-spoon-img{
+    position: absolute;
+    top: -30%;
+    left: -15%;
+
+    height: 85vh;
+    transform: rotate(180deg);
+}
+
+#tomato1{
+    position: absolute;
+    left: -3%;
+    top: 38%;
+
+    height: 40%;
+}
+
+#tomato2{
+    position: absolute;
+    bottom: -33%;
+    left: -1%;
+
+    height: 61%;
+    transform: rotate(-183deg);
+}
+
+#tomato3{
+    position: absolute;
+    top: -5%;
+    right: -3%;
+
+    height: 33%;
+    transform: scaleX(-1);
+}
+
+#towel {
+    position: absolute;
+    right: -50%;
+    bottom: -8%;
+
+    height: 85%;
+    transform: rotate(55deg);
+
+    border-radius: 5%;
+    border: 2px solid rgba(0, 64, 127, 0.47);
+
+}
+
+#cheese{
+    position: absolute;
+    bottom: -30%;
+    right: -17%;
+
+    height: 90%;
+    transform: rotate(-45deg);
+}
+
+.camh-info {
+    position: absolute;
+    transform: translateY(-20%);
+
+    text-align: center;
+
+    padding: 1rem;
+}
+
+.arrow {
+    border: solid beige;
+    border-width: 0 0.3rem 0.3rem 0;
+    border-radius: 0.15rem;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.continue-button-container{
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+    min-height: 3rem;
+    min-width: 3rem;
+
+    background-color: #6497e3;
+    border-radius: 2.5rem;
+    border: 0.15rem solid rgba(77, 109, 192, 0.76);
+    opacity: 0.8;
+}
+
+.orbit .continue-button-container{
+    bottom: 0;
+}
+
+/*#continue-button-svg{*/
+/*    height: 2.5rem;*/
+/*    filter: invert(49%) sepia(98%) saturate(278%) hue-rotate(177deg) brightness(98%) contrast(91%);*/
+/*}*/
+
+.continue-button {
+    display: flex;
+    min-height: 3rem;
+    min-width: 3rem;
+    flex-wrap: wrap;
+    place-content: center;
+}
+
+.continue-button .continue-button-icon {
+    /* essentially the i element */
+    height: 1rem;
+    width: 1rem;
+}
+
+.continue-button-container:hover{
+    /*background-image: linear-gradient(to right, #25aae1, #64a4d9, #a2badc, #bdeae6);*/
+
+    background-color: #a8d0ff;
+    border: 0.15rem solid rgba(98, 139, 255, 0.37);
+    box-shadow: 0 4px 15px 0 rgba(6, 180, 255, 0.37);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+
+.continue-button-container:not(:hover){
+    background-color: #6497e3;
+    border: 0.15rem solid rgba(77, 109, 192, 0.76);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.continue-button-container:active{
+    background-color: #115bc7;
+    transition: background-color 0.05s ease-in-out;
+}
+
+/***************************************
+    SECTION 3: Salt rat (Soup?)
+ ***************************************/
+.section-3 {
+    position: relative;
+    height: 100vh; /* prev: 100% */
+}
+
+.s3-explanation {
+    position: absolute;
+    left: 10%;
+    top: 10rem;
+}
+
+.s3-explanation-break{
+    margin: 0.3rem;
+}
+
+#soup-table{
+    position: absolute;
+    bottom: -1.5rem;
+
+    width: 98%;
+    height: 25%;
+
+    background-color: #b2845d;
+    border-radius: 1rem ;
+}
+
+.soup-temperature-container{
+    width: 100%;
+
+    position: absolute;
+    bottom: 7rem;
+
+    /* Positioning inside contents */
+    left: 10%;
+}
+
+.soup {
+    /* Soup bowl shape */
+    height: 6rem;
+    width: 10rem;
+    border-radius: 7rem 7rem 50rem 50rem;
+    border: 0.4rem solid #b7c5bd;
+
+    /* Positioning */
+    margin-right: 1rem;
+
+    /* font color */
+    color: #ffb24b;
+}
+
+.steam-gif {
+    /* Dimensions */
+    height: 6rem;
+    width: 10rem;
+
+    margin-right: 1rem;
+    opacity: 0.5;
+}
+
+#steam2 {
+    transform: scaleX(-1);
+}
+
+.soup:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.soup:not(:hover){
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.salt-rat-parent {
+    position: relative;
+    height: 100vh; /* Needs height for children */
+}
+
+#salt-rat, #salt-rat-hot, #salt-rat-cold {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 80vh;
+    max-height: 100%;
+}
+
+#salt-rat-hot, #salt-rat-cold{
+    opacity: 0;
+}
+
+/**************************
+    SECTION 4: Interconnectedness of brain (Assembly line)
+ **************************/
+
+.section-4 {
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.s4-explanation-break{
+    margin: 0.7rem;
+}
+
+.s4-continue-button{
+    z-index: 2;
+}
+
+.rat-assembly-line-parent{
+    position: relative;
+    height: 100vh;
+}
+
+#rat-assembly-line{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: -5%; /* This will place it at the bottom */
+}
+
+#rat-assembly-line img {
+    position: absolute;
+    bottom: 0; /* Sticks the image to the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the image horizontally */
+    width: 100%;
+    max-height: 100%;
+}
+
+/***************************************
+    SECTION 5: Disease related by medications (Vis #7)
+ ***************************************/
+.vis-salt {
+    position: absolute;
+    height: 80%;
+    bottom: 0;
+}
+
+#salt-shaker-img{
+    width: 100%;
+}
+
+.s5-continue-button{
+    left: 85vw;
+    bottom: 15%;
+}
+
+/***************************************
+    SECTION 6: Drug actions Heatmap (Vis #1)
+ ***************************************/
+
+#s6 .vis-explanation-parent{
+    height: 90%;
+}
+
+.mechanism-explanations-container{
+    margin: 1rem;
+}
+
+.s6-continue-button{
+    margin-top: 2rem;
+}
+
+/***************************************
+    SECTION 7: Drugs available per disease (Vis #4)
+ ***************************************/
+#s7 .vis-explanation-parent{
+    height: 75%;
+}
+
+.s7-continue-button{
+    margin: 5rem;
+}
+
+/***************************************
+    SECTION 8: Drugs and receptors (Vis #3)
+ ***************************************/
+
+
+/***************************************
+    SECTION 9: Be nice
+ ***************************************/
+
+.s9-explanation-parent{
+    position: relative;
+    height: 65vh;
+
+    padding: 2rem;
+    margin-left: 3rem;
+}
+
+.s9-explanation{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.s9-continue-button{
+    left: 75%;
+    bottom: 8rem;
+}
+
+.rain-container {
+    position: relative;
+    height: 100%;
+}
+
+.rain-floor{
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 25%;
+
+    filter: invert(78%) sepia(22%) saturate(7487%) hue-rotate(183deg) brightness(103%) contrast(91%);
+    opacity: 0.3;
+}
+
+#rain-floor-2 {
+    transform: scale(0.7) scaleX(-1);
+}
+
+.rat-rain-img-parent{
+    position: absolute;
+    right: -5%;
+    bottom: 1rem;
+    max-height: 100%;
+}
+
+#rain-gif {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    height: 70%;
+
+    filter: invert(30%) sepia(22%) saturate(7487%) hue-rotate(183deg) brightness(103%) contrast(91%);
+    opacity: 0.2;
+    /*mix-blend-mode: difference;*/
+    /*z-index: 1;*/
+}
+
+#rat-rain-img{
+    position: relative;
+    height: 99vh;
+}
+
+
+/***************************************
+    SECTION 10: Seek help
+ ***************************************/
+
+.s10-explanation-parent{
+    position: relative;
+    height: 35%;
+    width: 65%;
+}
+
+.s10-explanation{
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    left: 3%;
+}
+
+.rat-therapy-img-parent{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+}
+
+#window {
+    position: absolute;
+    top: -20%;
+    right: -30%;
+
+    height: 150%;
+
+    /*filter: invert(30%) sepia(22%) saturate(7487%) hue-rotate(183deg) brightness(103%) contrast(91%);*/
+    /*filter: invert(73%) sepia(42%) saturate(484%) hue-rotate(174deg) brightness(101%) contrast(103%);*/
+    filter: invert(84%) sepia(96%) saturate(1706%) hue-rotate(162deg) brightness(98%) contrast(106%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+#rat-therapy-img{
+    position: relative;
+    height: 75vh;
+}
